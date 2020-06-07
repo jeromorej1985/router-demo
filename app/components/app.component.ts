@@ -6,6 +6,7 @@ import { Router } from "@angular/router";
     template: `
         <a [routerLink]="['/']">Home</a>
         <a [routerLink]="['/product']">Product Details</a>
+        <a [routerLink]="['/product', 5368]">Product Details With Param</a>
         <input type="button" value="Product Details"
                 (click)="navigateToProductDetail()" />
         <router-outlet></router-outlet>

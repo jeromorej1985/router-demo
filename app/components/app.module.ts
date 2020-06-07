@@ -5,13 +5,15 @@ import { HomeComponent } from './home.component';
 import { ProductDetailComponent } from './product.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { routing } from './app.routing';
+import { ProductDetailParamComponent } from './product-param.component';
 
 @NgModule({
     imports: [  BrowserModule,
                 routing ],
     declarations: [ AppComponent,
                     HomeComponent,
-                    ProductDetailComponent
+                    ProductDetailComponent,
+                    ProductDetailParamComponent
      ],
      providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [ AppComponent ]
