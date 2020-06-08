@@ -8,6 +8,8 @@ import { routing } from './app.routing';
 import { ProductDetailParamComponent } from './product-param.component';
 import { ProductDescriptionComponent } from './product-description.component';
 import { SellerInfoComponent } from './seller-info.component';
+import { LoginGuardService } from '../services/loginGuardService';
+import { UnsavedChangesGuardService } from '../services/unsavedChangesGuardService';
 
 @NgModule({
     imports: [  BrowserModule,
@@ -19,7 +21,7 @@ import { SellerInfoComponent } from './seller-info.component';
                     ProductDescriptionComponent,
                     SellerInfoComponent
      ],
-     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, LoginGuardService, UnsavedChangesGuardService],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
