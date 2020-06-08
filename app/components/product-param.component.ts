@@ -3,7 +3,13 @@ import { ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: 'product',
-    template: `<h1 class="product">Product Details for Product: {{ productId }}</h1>`,
+    template: `
+        <div class="product">
+            <h1>Product Details for Product: {{ productId }}</h1>
+            <router-outlet></router-outlet>
+            <p><a [routerLink]="['./seller', 1592]">Seller Info</a></p>
+        </div>
+    `,
     styles: ['.product {background: cyan']
 })
 export class ProductDetailParamComponent {
